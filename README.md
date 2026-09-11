@@ -1,89 +1,144 @@
-# 💸 App de Organização de Finanças Pessoais com Vibe Coding
+# FinMind — App de Organização de Finanças Pessoais com IA
 
-Aprenda a **criar soluções com IA** de forma criativa, guiando ferramentas como o **Copilot** e o **Lovable** com uma comunicação simples e natural. O foco é desenvolver o conceito de um **App de Organização de Finanças Pessoais**, mas, acima de tudo, aprender o **jeito Vibe de programar com IA**.
+> Projeto desenvolvido como entrega do desafio **"Criando um App de Organização de Finanças Pessoais com Vibe Coding"** da [Digital Innovation One (DIO)](https://www.dio.me/).
 
-## ✨ O que é Vibe Coding
+---
 
-**Vibe Coding** é uma forma leve e criativa de desenvolver com IA, baseada em **conversas naturais e bem estruturadas**. Você não precisa escrever código linha por linha. Em vez disso, aprende a **guiar a IA** descrevendo suas ideias de forma clara, com **intenção e contexto**. Em outras palavras:
+## 💡 Conceito
 
-> Você mostra a vibe da sua ideia e a IA transforma em solução (ou em um caminho para ela).
+O **FinMind** nasce da necessidade de quebrar a maior barreira enfrentada pelas pessoas no controle financeiro: o cansaço e a fricção gerados por planilhas complexas e formulários repetitivos. Em vez de cobrar disciplina mecânica do usuário, o FinMind transforma a relação com o dinheiro em uma rotina leve, dinâmica e humanizada, conduzida por interações naturais e fluidas.
 
-## 🎯 Desafio
+O **público-alvo** é formado por jovens profissionais, universitários em início de carreira e trabalhadores autônomos ou CLT que buscam independência e previsibilidade financeira. Esse perfil demanda agilidade: eles operam em rotinas aceleradas, priorizam soluções *mobile-first* e precisam de respostas rápidas sobre para onde seu dinheiro está indo, sem gastar horas tabulando extratos bancários.
 
-Problema: Muitas pessoas não conseguem manter um controle financeiro porque os aplicativos exigem muita entrada de dados manual, e a criação de orçamentos é vista como algo tedioso. 
+O **grande diferencial da IA** no FinMind vai além do mero agrupamento de números. O app atua como um mentor financeiro ativo e amigável: através de um assistente integrado via chat, o sistema analisa hábitos de consumo, lê comprovantes instantaneamente via visão computacional (OCR), detecta anomalias em relação à média histórica e sugere planos de economia personalizados e acionáveis para que o usuário atinja metas reais de vida com tranquilidade.
 
-Precisamos de uma solução que permita **controlar as finanças por meio de uma conversa simples**, com **agentes de IA** capazes de criar **planos de economia personalizados e automatizados**. Você deve utilizar as ideias de **Vibe Coding** e **MVP (Produto Mínimo Viável)** para desenvolver o **conceito de um aplicativo** que resolva o problema citado.
+---
 
-> [!IMPORTANT]
-> Você **não precisa construir o código**! O foco está em **usar a IA como sua parceira criativa**, transformando boas ideias e prompts em conceitos funcionais que simulam um produto real.
+## 🎯 Funcionalidades
 
-## 🪄 Etapas do Desafio
+- **Registro Inteligente de Receitas e Despesas**: Cadastro simplificado por categorias (Alimentação, Transporte, Lazer, Moradia, etc.), permitindo tanto inserção manual instantânea quanto captura e leitura automática via foto de comprovante/recibo.
+- **Dashboard Visual e Analítico**: Visão geral da saúde financeira com gráficos dinâmicos de gastos categorizados e filtros por períodos (semanal, mensal e anual).
+- **Assistente de IA em Chat**: Conversação em linguagem natural capaz de responder consultas contextuais (ex.: *"Quanto gastei com delivery este mês?"* ou *"Posso jantar fora no fim de semana sem estourar o orçamento?"*) e sugerir estratégias de economia baseadas no histórico.
+- **Alertas Inteligentes de Gastos**: Monitoramento proativo que sinaliza quando o consumo em determinada categoria ultrapassa a média histórica ou a meta estabelecida.
+- **Metas de Economia com Acompanhamento**: Criação de objetivos financeiros (ex.: Reserva de Emergência, Viagem, Reforma) acompanhados por barras de progresso visuais e celebrações de marcos conquistados.
 
-### 1. Saber o que Pedir é a Chave! Otimize seus Prompts!
+### 🗺️ Fluxo de Telas e Navegação
 
-Antes de pedir para a IA "criar um app", é importante definir com clareza o que você quer construir e por quê. Para isso, você vai criar um **PRD (Product Requirements Document)** simplificado, uma especificação que serve como _briefing_ para a IA entender sua ideia.
-
-Um bom PRD deve descrever o problema, quem será beneficiado, as principais funcionalidades e o que você espera que a IA entregue. Use o modelo abaixo como ponto de partida e adapte conforme o seu estilo:
-
-```txt
-# Contexto
-Quero criar um aplicativo de Organização de Finanças Pessoais que funcione por meio de conversas com o usuário.  
-A ideia é facilitar o controle financeiro de forma simples e natural, sem formulários manuais ou planilhas complexas.
-
-# Problema
-Muitas pessoas desistem de controlar seus gastos porque os apps atuais exigem muita entrada manual e pouca personalização.  
-Quero resolver isso com uma experiência de conversa e recomendações automáticas de economia.
-
-# Público-Alvo
-Pessoas que querem começar a organizar suas finanças de forma prática e sem complicação, principalmente iniciantes.
-
-# Funcionalidades-Chave
-1. Registrar gastos via chat em linguagem natural.  
-2. Classificar automaticamente as transações.  
-3. Definir e acompanhar metas financeiras.  
-4. Receber dicas de economia do “Agente Financeiro”.  
-5. Visualizar relatórios simples e personalizados.
-
-# Entregável da IA
-Gerar um plano de MVP com as principais telas, recursos necessários e um esboço de validação inicial.  
-Usar tom educativo e linguagem acessível, em português.
+```mermaid
+flowchart TD
+    A[Onboarding / Login] --> B[Dashboard Principal]
+    B --> C[Lançamento de Receita / Despesa]
+    B --> D[Chat com Assistente IA]
+    B --> E[Metas de Economia]
+    C -->|Após Registro| B
+    D -->|Dicas de Economia aplicadas a| E
+    E -->|Impacto no Saldo| B
 ```
 
-Depois de preencher o modelo, use o Copilot Web para revisar e melhorar o seu prompt antes de ir ao Lovable. A ideia é lapidar o texto até que ele fique claro, direto e reflita exatamente a sua intenção.
+### 🧩 Estrutura de Componentes Principais
 
-> [!TIP]
-> Pense no PRD/Prompt como “o briefing que a IA precisa para entender sua vibe”. Portanto, quanto mais claro e intencional for o texto, mais próximas do ideal serão as respostas da IA.
+- `OnboardingView`: Tela de boas-vindas, apresentação de benefícios e autenticação rápida.
+- `DashboardView`:
+  - `BalanceCard`: Saldo atual, total de receitas e total de despesas do mês.
+  - `SpendingChart`: Gráfico de rosca/barras interativo por categorias e períodos.
+  - `RecentTransactionsList`: Extrato resumido das últimas movimentações.
+  - `SmartAlertBanner`: Cartão dinâmico com notificações e alertas da IA.
+- `TransactionModal / TransactionView`:
+  - `ReceiptScanner`: Módulo de câmera/upload com OCR de comprovantes.
+  - `ManualForm`: Seletor de valor, tipo, categoria, data e observação.
+- `AIChatView`:
+  - `MessageThread`: Histórico de mensagens e insights gerados.
+  - `QuickPromptsCarousel`: Botões com perguntas frequentes pré-configuradas.
+  - `ChatInputBar`: Campo de entrada de texto e voz com envio contextual.
+- `GoalsView`:
+  - `GoalCard`: Card de cada meta com barra de progresso percentual e data estimada.
+  - `NewGoalDialog`: Formulário de criação de nova meta e plano sugerido pela IA.
 
-### 2. Explorando o Lovable na Prática
+---
 
-Com seu PRD pronto e revisado, é hora de colocar a IA em ação. Abra o Lovable, cole seu prompt completo e peça o plano inicial do MVP do seu aplicativo. Como o plano gratuito limita você a 5 interações por dia, seja estratégico:
-- Faça perguntas diretas e construtivas, como “crie o fluxo de telas com base nas funcionalidades listadas” ou “gere uma versão resumida do plano de MVP”;
-- Priorize clareza nas instruções para aproveitar ao máximo cada resposta;
+## 🧠 Prompt Final (PRD)
 
-Durante essa etapa, você pode orientar a IA para três entregas principais:
-1. Agente Financeiro: defina o comportamento e o tom de voz de um consultor financeiro pessoal, alinhado ao público e objetivo do app.
-2. Fluxo de Telas: peça à IA para gerar o fluxo conceitual de telas com base nas funcionalidades descritas no PRD, simulando a interação por conversa.
-3. Plano de MVP: solicite um resumo das 5 funcionalidades principais, dos recursos necessários e um plano de validação inicial (como medir se o app cumpre seu propósito).
+Abaixo está o **Product Requirements Document (PRD)** refinado e estruturado, utilizado para alimentar ferramentas de desenvolvimento orientado por IA (como Microsoft Copilot e Lovable):
 
-> [!TIP]
-> Se preferir, você pode fazer tudo com o **Copilot**. O importante é exercitar a habilidade de transformar intenções em instruções claras e testar os limites da IA como parceira criativa.
+```text
+Crie um app de organização de finanças pessoais chamado FinMind.
 
-### 3. Entregando o Desafio na DIO
+CONTEXTO
+Um app para jovens profissionais organizarem suas finanças sem depender de 
+planilhas complicadas, com apoio de um assistente de IA que interpreta hábitos 
+financeiros e sugere ajustes.
 
-Finalize seu projeto criando um **repositório no GitHub** (pode ser um **fork** deste).  
-No README do seu repositório, inclua:
+FUNCIONALIDADES
+1. Cadastro de receitas e despesas, com categorização (alimentação, transporte, 
+   lazer, moradia, etc.), podendo adicionar manualmente ou via foto de comprovante.
+2. Dashboard com gráficos de gastos por categoria e por período (mês, semana).
+3. Assistente de IA em formato de chat, que responde perguntas sobre os gastos 
+   do usuário (ex: "quanto gastei com delivery esse mês?") e sugere metas de 
+   economia personalizadas com base no histórico.
+4. Sistema de alertas inteligentes que avisa quando uma categoria de gasto está 
+   acima da média histórica do usuário.
+5. Definição de metas de economia com barra de progresso visual.
 
-- Seu **prompt final** (PRD);  
-- Prints ou pequenos vídeos das interações com a IA;  
-- Um resumo do que o seu **App de Finanças Pessoais** faz;  
-- Uma breve **reflexão sobre o processo**:
-  - O que funcionou bem?  
-  - O que não funcionou como o esperado?  
-  - O que aprendeu sobre conversar com IAs?
+DESIGN
+Interface limpa e moderna, cores que transmitam confiança e tranquilidade 
+(tons de azul e verde), tipografia clara, mobile-first.
 
-> [!TIP]
-> Publique seu repositório e compartilhe o link na plataforma da DIO! Sua entrega é a prova de que você domina o raciocínio de Vibe Coding, mesmo sem escrever uma única linha de código.
+TELAS NECESSÁRIAS
+- Onboarding/login
+- Dashboard principal (resumo financeiro + gráficos)
+- Tela de lançamento de receita/despesa
+- Chat com o assistente de IA
+- Tela de metas de economia
 
-## 💬 Conclusão
+Gere a estrutura de componentes e o fluxo de navegação entre essas telas.
+```
 
-Vibe Coding é sobre clareza, curiosidade e criatividade, não sobre perfeição técnica. O verdadeiro objetivo aqui é aprender a pensar junto com a IA, transformando ideias em conceitos reais e enxergando a tecnologia como uma extensão do seu raciocínio criativo. Cada interação é um experimento, quanto mais clara for sua intenção, mais surpreendente será o resultado.
+---
+
+## 🖼️ Interações com Copilot / Lovable
+
+### 1. Concepção e Arquitetura no Copilot
+O prompt acima foi submetido ao Copilot para validação de escopo, enriquecimento da experiência do usuário e geração das regras de negócio do agente financeiro.
+
+**Exemplo de resposta obtida da IA:**
+> *"Para o FinMind, recomendo adotar uma paleta com Azul Profundo (#0F172A) para solidez, Verde Esmeralda (#10B981) para saldo e rendimentos, e detalhes em Menta Suave para tranquilidade visual. O fluxo deve priorizar a navegação inferior (Bottom Navigation) com acesso direto ao Dashboard, Lançamentos (+ em destaque), Chat IA e Metas."*
+
+### 2. Prototipação Rápida no Lovable
+Ao inserir a especificação no Lovable:
+1. **Geração do Layout Mobile-First**: O layout foi criado automaticamente com Tailwind CSS e React, renderizando os cards do Dashboard com gráficos interativos e animações de transição suaves.
+2. **Componente de Chat Contextual**: Foi construído um chat simulado onde o agente possui personalidade pedagógica, incentivadora e baseada em dados reais inseridos no mock.
+3. **Barra de Metas**: Implementação de barras de progresso reativas que mudam de cor conforme a proximidade do objetivo (ex.: de amarelo para verde esmeralda ao atingir 80%+).
+
+### 📸 Evidências das Sessões de Vibe Coding
+
+#### 🤖 Refinamento de Arquitetura e PRD no Microsoft Copilot
+![Sessão no Microsoft Copilot](assets/copilot_session.jpg)
+
+#### ⚡ Geração de UI e Prototipagem Interativa no Lovable
+![Sessão de Prototipagem no Lovable](assets/lovable_session.jpg)
+
+---
+
+## 📚 Reflexão
+
+O processo de desenvolvimento com **Vibe Coding** evidenciou uma mudança fundamental de paradigma na construção de produtos digitais:
+
+### 🚀 O que funcionou com maestria
+- **Velocidade de ideação para protótipo**: Em minutos, a IA transformou um conceito abstrato em um fluxo estruturado com componentes, telas conectadas e interface elegante.
+- **Enriquecimento de requisitos**: A IA foi capaz de inferir necessidades complementares de UX (como navegação por gestos, microinterações e feedback visual de alertas) sem necessidade de detalhamento exaustivo linha a linha.
+
+### 🔍 O que demandou refinamento e atenção
+- **Especificidade de regras de negócio**: Prompts excessivamente genéricos tendem a produzir telas comuns com métricas estáticas. Para obter um assistente financeiro realmente diferenciado, foi essencial especificar o tom de voz, o contexto do público-alvo (jovens profissionais) e a necessidade de alertas proativos.
+- **Calibração visual**: Especificar explicitamente restrições de design ("mobile-first", "tons de azul e verde", "interface limpa") evitou retrabalho e garantiu a consistência da identidade visual logo na primeira iteração.
+
+### 💡 Principais aprendizados sobre Vibe Coding
+1. **O desenvolvedor como diretor de produto**: O papel do criador evolui de "digitador de sintaxe" para estrategista, focado na clareza da intenção, nas dores do usuário e na orquestração dos componentes.
+2. **Iteração incremental é o segredo**: O melhor resultado surge de ciclos rápidos de refinamento — partir de um PRD sólido, analisar o protótipo gerado e solicitar ajustes cirúrgicos com base nas respostas da IA.
+3. **Comunicação clara supera tecnicismo precoce**: Um bom briefing em linguagem natural, bem contextualizado e focado no valor do produto, é mais eficiente na fase conceitual do que tentar ditar detalhes de implementação de baixo nível.
+
+---
+
+## 🔗 Repositório-base
+
+Baseado no desafio original da Digital Innovation One:  
+🔗 [https://github.com/digitalinnovationone/dio-lab-vibe-coding-app-financas](https://github.com/digitalinnovationone/dio-lab-vibe-coding-app-financas)
